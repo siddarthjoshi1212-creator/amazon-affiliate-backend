@@ -3,7 +3,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
 
-const Product = require('./models/Product');
+const Product=require(' ./models/Product.js');
 
 const app = express();
 app.use(cors());
@@ -29,4 +29,5 @@ app.post('/api/products', async (req, res) => {
 });
 
 const PORT = process.env.PORT || 5000;
+
 app.listen(PORT, () => console.log(`Server running on ${PORT}`));
